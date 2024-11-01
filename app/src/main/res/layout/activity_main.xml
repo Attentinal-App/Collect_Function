@@ -1,0 +1,94 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- 타이머 시간 표시 -->
+    <TextView
+        android:id="@+id/timeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/default_time"
+        android:textSize="72sp"
+        android:textColor="#000000"
+        android:layout_marginTop="30dp" />
+
+    <!-- 센서 데이터 표시 (조도, 소음, 심박수) -->
+    <TextView
+        android:id="@+id/lightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/light"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:id="@+id/noiseTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/noise"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:id="@+id/heartRateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/heartrate"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp" />
+
+    <!-- 걸음수 데이터 표시 -->
+    <TextView
+        android:id="@+id/stepCountTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/step_count"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp" />
+
+    <!-- 버튼들 (재설정, 시작/정지) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/lapButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@string/lap"
+            android:textSize="18sp"
+            android:backgroundTint="#444444"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round_button" />
+
+        <Button
+            android:id="@+id/startStopButton"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:text="@string/start_timer"
+            android:textSize="18sp"
+            android:backgroundTint="#008000"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/round_button" />
+    </LinearLayout>
+
+    <!-- 랩 타임 표시 -->
+    <ListView
+        android:id="@+id/lapListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical" /> <!-- 스크롤바 표시 -->
+</LinearLayout>
