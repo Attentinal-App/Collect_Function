@@ -3,18 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.kmou.capstone_sensor">
 
-    <!-- RECORD_AUDIO 권한 추가 -->
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <!-- 인터넷 사용 권한 설정-->
+    <!-- 인터넷 사용 권한 설정 -->
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 헬스 커넥트 권한 설정-->
+
+    <!-- 헬스 커넥트 권한 설정 -->
     <uses-permission android:name="android.permission.health.READ_HEART_RATE"/>
     <uses-permission android:name="android.permission.health.WRITE_HEART_RATE"/>
     <uses-permission android:name="android.permission.health.READ_STEPS"/>
     <uses-permission android:name="android.permission.health.WRITE_STEPS"/>
     <uses-permission android:name="android.permission.BIND_HEALTH_CONNECT_SERVICE" />
 
-    <!-- Check if Health Connect is installed -->
+    <!-- Health Connect 설치 여부 확인 -->
     <queries>
         <package android:name="com.google.android.apps.healthdata" />
     </queries>
@@ -29,6 +28,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Capstone_sensor"
         tools:targetApi="31">
+
+        <!-- MainActivity 설정 -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -38,7 +39,7 @@
             </intent-filter>
         </activity>
 
-        <!-- 헬스 커넥트 권한 설명을 위한 활동 -->
+        <!-- PermissionsRationaleActivity 설정 -->
         <activity
             android:name=".PermissionsRationaleActivity"
             android:exported="true">
@@ -47,8 +48,7 @@
             </intent-filter>
         </activity>
 
-        <!-- For versions starting Android 14, create an activity alias to show the rationale
-       of Health Connect permissions once users click the privacy policy link. -->
+        <!-- Android 14 이상에서 개인정보처리방침 대화상자 표시를 위한 activity-alias 설정 -->
         <activity-alias
             android:name="ViewPermissionUsageActivity"
             android:exported="true"
@@ -60,5 +60,4 @@
             </intent-filter>
         </activity-alias>
     </application>
-
 </manifest>

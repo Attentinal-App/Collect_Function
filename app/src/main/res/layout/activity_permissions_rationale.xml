@@ -1,20 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_permissions_rationale.xml -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:layout_gravity="center">
 
     <TextView
-        android:id="@+id/rationaleTextView"
+        android:id="@+id/titleTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/permissions_rationale"
-        android:textSize="18sp" />
+        android:text="권한 요청"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이 앱은 건강 데이터를 읽고 쓰기 위해 권한이 필요합니다. 계속하려면 권한을 허용해 주세요."
+        android:paddingBottom="16dp" />
 
     <Button
-        android:id="@+id/requestButton"
-        android:layout_width="wrap_content"
+        android:id="@+id/confirmButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/request_permissions" />
+        android:text="권한 허용" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="취소"
+        android:layout_marginTop="8dp" />
 </LinearLayout>

@@ -1,14 +1,7 @@
 <resources>
-    <string name="app_name">Capstone_sensor</string>
-    <string name="start_timer">시작</string>
-    <string name="stop_timer">정지</string>
-    <string name="default_time">00:00.00</string>
-    <string name="light">조도: %.2f lx</string>
-    <string name="noise">소음: %s dB</string>
+    <string name="app_name">Capstone Sensor</string>
     <string name="heartrate">심박수: %d BPM</string>
-    <string name="lap">랩</string>
     <string name="permissions_rationale">이 앱은 건강 데이터를 읽기 위해 권한이 필요합니다. 권한을 요청하시겠습니까?</string>
     <string name="request_permissions">권한 요청</string>
     <string name="step_count">걸음수: %d</string>
-
 </resources>

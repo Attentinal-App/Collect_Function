@@ -5,7 +5,10 @@ plugins {
 
 android {
     namespace = "com.kmou.capstone_sensor"
-    compileSdk = 34
+    compileSdk = 35
+    viewBinding {
+        enable = true
+    }
 
     defaultConfig {
         applicationId = "com.kmou.capstone_sensor"
@@ -37,7 +40,7 @@ android {
 
 dependencies {
     implementation("androidx.health:health-services-client:1.1.0-alpha03")
-    implementation ("androidx.health.connect:connect-client:1.1.0-alpha08")
+    implementation ("androidx.health.connect:connect-client:1.1.0-alpha10")
     implementation ("androidx.activity:activity-ktx:1.9.2")  // AndroidX Activity
     implementation("com.android.volley:volley:1.2.1")
     implementation(libs.appcompat)
